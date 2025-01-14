@@ -3,4 +3,10 @@ services:
     build:
       context: .
       dockerfile: dockerfiles/backend.Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./src:/app
+    environment:
+      - PYTHONUNBUFFERED=1  # Optional, ensures real-time logging
 
